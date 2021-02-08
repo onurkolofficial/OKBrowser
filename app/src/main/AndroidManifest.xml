@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.onurkol.app.browser">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/OKBrowserLight">
+        <activity android:name=".activity.settings.AboutActivity"/>
+        <activity android:name=".activity.settings.WebSettingsActivity" />
+        <activity android:name=".activity.SettingsActivity" />
+        <activity android:name=".activity.BookmarksActivity" />
+        <activity android:name=".activity.HistoryActivity" />
+        <activity android:name=".activity.WelcomeActivity" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <!-- StartApp Ads Sdk ! -->
+        <provider
+            android:name="com.startapp.sdk.adsbase.StartAppInitProvider"
+            android:authorities="${applicationId}.startappinitprovider"
+            android:exported="false" />
+        <activity
+            android:name="com.startapp.sdk.adsbase.consent.ConsentActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.startapp.sdk.ads.list3d.List3DActivity"
+            android:theme="@android:style/Theme" />
+        <activity
+            android:name="com.startapp.sdk.adsbase.activities.OverlayActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.startapp.sdk.adsbase.activities.FullScreenActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:theme="@android:style/Theme" />
+
+        <service android:name="com.startapp.sdk.adsbase.InfoEventService" />
+        <service
+            android:name="com.startapp.sdk.adsbase.PeriodicJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver android:name="com.startapp.sdk.adsbase.remoteconfig.BootCompleteListener">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- End StartApp Ads Sdk ! -->
+
+    </application>
+</manifest>

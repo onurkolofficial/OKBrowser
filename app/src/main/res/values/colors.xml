@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="gray">#7F7F7F</color>
+    <color name="primary">#2181D9</color>
+    <color name="primary_dark">#145B9C</color>
+    <color name="secondary">#9FA8B1</color>
+    <color name="secondary_dark">#55585A</color>
+    <color name="transparent">#00000000</color>
+    <color name="th_light_background">#F1F1F1</color>
+    <color name="th_light_toolbar">#DADADA</color>
+    <color name="textColorLight">@color/white</color>
+    <color name="textColorGray">#9F9F9F</color>
+    <color name="textColorDarkGray">#606060</color>
+    <color name="textColorDark">#151515</color>
+    <color name="checkboxBackgroundWhite">#FEFEFE</color>
+    <color name="tabViewBackground">#A8000000</color>
+    <color name="popupMenuBackground">#E0E0E0</color>
+</resources>

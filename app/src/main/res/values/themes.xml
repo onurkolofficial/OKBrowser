@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- OK Browser Light Theme. -->
+    <style name="OKBrowserLight" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_dark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/primary_dark</item>
+        <item name="android:windowBackground">@color/th_light_background</item>
+        <!-- Customize Items -->
+        <item name="toolbarStyle">@style/toolbarLight</item>
+        <item name="progressBarStyle">@style/progressBarLight</item>
+        <item name="android:editTextBackground">@color/th_light_toolbar</item>
+        <item name="android:editTextColor">@color/black</item>
+    </style>
+    <!-- Light Theme Style !-->
+    <style name="toolbarLight">
+        <item name="android:background">@color/th_light_toolbar</item>
+    </style>
+    <style name="progressBarLight">
+        <item name="android:background">@color/primary_dark</item>
+    </style>
+    <style name="menuButtons" parent="Base.Widget.AppCompat.Button.Borderless.Colored">
+        <item name="android:textColor">@color/textColorDark</item>
+        <item name="android:tint">@color/gray</item>
+    </style>
+
+
+    <!-- Welcome Screen Style !-->
+    <style name="WelcomeBodyText">
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">@color/textColorLight</item>
+        <item name="android:fontFamily">@font/lekton_bold</item>
+    </style>
+    <style name="LightCheckBox">
+        <item name="android:buttonTint">@color/checkboxBackgroundWhite</item>
+        <item name="android:textColor">@color/textColorLight</item>
+    </style>
+</resources>

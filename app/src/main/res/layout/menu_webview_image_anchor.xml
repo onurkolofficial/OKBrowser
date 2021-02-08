@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Url !-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/showWebUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_margin="10dp"
+            android:text="URL" />
+    </LinearLayout>
+    <!-- Image Menu Body !-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- Open Image Button !-->
+        <Button
+            android:id="@+id/imageAnchorOpenImageButton"
+            style="@style/menuButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/open_image"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:icon="@drawable/ic_outline_image_24"
+            app:iconGravity="start"
+            app:iconPadding="10dp"
+            app:iconTint="@color/gray" />
+        <!-- Open Image With New Tab Button !-->
+        <Button
+            android:id="@+id/imageAnchorOpenImageNewTabButton"
+            style="@style/menuButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/open_image_new_tab"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:icon="@drawable/ic_outline_add_box_24"
+            app:iconGravity="start"
+            app:iconPadding="10dp"
+            app:iconTint="@color/gray" />
+        <!-- Download Image Button !-->
+        <Button
+            android:id="@+id/imageAnchorDownloadImageButton"
+            style="@style/menuButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/download_image"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:icon="@drawable/ic_baseline_get_app_24"
+            app:iconGravity="start"
+            app:iconPadding="10dp"
+            app:iconTint="@color/gray" />
+    </LinearLayout>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+    <!-- URL Menu Body !-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- Open New Tab Button !-->
+        <Button
+            android:id="@+id/imageAnchorOpenNewTabButton"
+            style="@style/menuButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/open_url_new_tab"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:icon="@drawable/ic_outline_add_box_24"
+            app:iconGravity="start"
+            app:iconPadding="10dp"
+            app:iconTint="@color/gray" />
+        <!-- Copy Url Button !-->
+        <Button
+            android:id="@+id/imageAnchorCopyUrlButton"
+            style="@style/menuButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/copy_url"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:icon="@drawable/ic_baseline_content_copy_24"
+            app:iconGravity="start"
+            app:iconPadding="10dp"
+            app:iconTint="@color/gray" />
+        <!-- Copy Title Button !-->
+        <Button
+            android:id="@+id/imageAnchorCopyTitleButton"
+            style="@style/menuButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/copy_url_title"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:icon="@drawable/ic_twotone_content_copy_24"
+            app:iconGravity="start"
+            app:iconPadding="10dp"
+            app:iconTint="@color/gray" />
+    </LinearLayout>
+</LinearLayout>

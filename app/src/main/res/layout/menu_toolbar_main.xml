@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Menu Icon Group !-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/forwardButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:background="?attr/actionBarItemBackground"
+            app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
+        <ImageButton
+            android:id="@+id/refreshButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:background="?attr/actionBarItemBackground"
+            app:srcCompat="@drawable/ic_baseline_refresh_24" />
+        <ImageButton
+            android:id="@+id/addBookmarkButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:background="?attr/actionBarItemBackground"
+            app:srcCompat="@drawable/ic_baseline_star_border_24" />
+        <ImageButton
+            android:id="@+id/downloadsButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:background="?attr/actionBarItemBackground"
+            app:srcCompat="@drawable/ic_baseline_get_app_24" />
+        <ImageButton
+            android:id="@+id/historyButton"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:padding="12dp"
+            android:background="?attr/actionBarItemBackground"
+            app:srcCompat="@drawable/ic_baseline_history_24" />
+    </LinearLayout>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <!-- New Tab !-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- New Tab Button !-->
+            <Button
+                android:id="@+id/newTabButton"
+                style="@style/menuButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/new_tab"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:icon="@drawable/ic_outline_add_box_24"
+                app:iconGravity="start"
+                app:iconPadding="10dp"
+                app:iconTint="@color/gray" />
+            <!-- Incognito Mode !-->
+            <LinearLayout
+                android:id="@+id/incognitoModeCBoxClick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_baseline_history_toggle_off_24"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/gray"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/incognito_mode"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+                <CheckBox
+                    android:id="@+id/incognitoModeCBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_weight="0.5" />
+            </LinearLayout>
+            <!-- Desktop Mode !-->
+            <LinearLayout
+                android:id="@+id/desktopModeCBoxClick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_baseline_desktop_windows_24"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/gray"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/desktop_mode"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+                <CheckBox
+                    android:id="@+id/desktopModeCBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:layout_weight="0.5" />
+            </LinearLayout>
+            <!-- Bookmarks !-->
+            <Button
+                android:id="@+id/bookmarksButton"
+                style="@style/menuButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/bookmarks"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:icon="@drawable/ic_baseline_bookmark_border_24"
+                app:iconGravity="start"
+                app:iconPadding="10dp"
+                app:iconTint="@color/gray" />
+            <!-- Settings !-->
+            <Button
+                android:id="@+id/settingsButton"
+                style="@style/menuButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/settings"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:icon="@drawable/ic_baseline_settings_24"
+                app:iconGravity="start"
+                app:iconPadding="10dp"
+                app:iconTint="@color/gray" />
+            <!-- Close All Tabs !-->
+            <Button
+                android:id="@+id/closeAllTabButton"
+                style="@style/menuButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/close_all_tabs"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:icon="@drawable/ic_baseline_exit_to_app_24"
+                app:iconGravity="start"
+                app:iconPadding="10dp"
+                app:iconTint="@color/gray" />
+            <!-- Exit Browser !-->
+            <Button
+                android:id="@+id/exitButton"
+                style="@style/menuButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/exit_browser"
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                app:icon="@drawable/ic_baseline_close_24"
+                app:iconGravity="start"
+                app:iconPadding="10dp"
+                app:iconTint="@color/gray" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
